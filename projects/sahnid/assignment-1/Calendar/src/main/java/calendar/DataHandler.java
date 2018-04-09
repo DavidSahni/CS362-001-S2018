@@ -352,8 +352,8 @@ public class DataHandler {
                 //The user did specify weekly recurrence, so increment the
                 //day until it falls on a weekday the user specified
                 for (int k = 0; k < 7; k++) {
-                    nextDay.add(nextDay.DAY_OF_MONTH, 1);
                     int newDayOfWeek = nextDay.get(nextDay.DAY_OF_WEEK);
+                    nextDay.add(nextDay.DAY_OF_MONTH, 1);
                 
                     for (int i = 0; i < recurDays.length; i++) {
                         //If the calendar is set to a day of the week that the
