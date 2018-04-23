@@ -84,8 +84,6 @@ public class CalDay {
 					return;
 				}
 			}
-		    //The appointment hasn't been added yet, so add it
-		    getAppts().add(appt);
 		}
 	}
 

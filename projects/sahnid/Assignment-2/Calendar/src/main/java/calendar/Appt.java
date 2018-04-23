@@ -124,7 +124,6 @@ public class Appt{
     setXmlElement(null);
     
     //Sets valid to true - this is now a valid appointment
-    this.valid = true;
 }
     /**
      * Constructs a new appointment that has no start time on the 
@@ -168,8 +167,6 @@ public class Appt{
 	public void setValid() {
 
 		if (startMonth < 1 || startMonth > 12)
-			this.valid = false;
-		else if (startHour < 0 || startHour > 23)
 			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
 			this.valid = false;
@@ -304,7 +301,7 @@ public class Appt{
     }
     private void setRecurDays(int[] recurDays) {
         if (recurDays == null) {
-            this.recurDays = new int[0];
+            this.recurDays = null;
         }
         else {
             this.recurDays = recurDays;
