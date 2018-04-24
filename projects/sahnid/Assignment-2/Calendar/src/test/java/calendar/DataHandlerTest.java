@@ -17,20 +17,16 @@ import java.util.*;
 
 public class DataHandlerTest{
 
-  private static String defaultFile = "calendar.xml";
 
   private GregorianCalendar x1;
   private GregorianCalendar x2;
-  private GregorianCalendar x0;
 
   @Before
   public void testSetup(){
     GregorianCalendar g1 = new GregorianCalendar(2018, 1, 10);
     GregorianCalendar g2 = new GregorianCalendar(2018, 1, 20);
-    GregorianCalendar g0 = new GregorianCalendar(2018, 1, 0);
     x1 = g1;
     x2 = g2;
-    x0 = g0;
 
   }
 
@@ -44,7 +40,7 @@ public class DataHandlerTest{
   @Test(timeout = 4000)
   public void test01()  throws Throwable  {
     Appt a = new Appt(15, 1, 2018, "Test Appt", "This is app Test Appt", "xyz@gmail.com");
-    Appt b = new Appt(10, 1, 2018, "Test Appt 2", "Second Test Appt", "test@test.com");
+    Appt b = new Appt(11, 1, 2018, "Test Appt 2", "Second Test Appt", "test@test.com");
     Appt c = new Appt(20, 2, 2018, "third test app", "3333", "tester2@test.com");
     Appt d = new Appt(35, 0, -1, "not valid appts!", "", "");
 
